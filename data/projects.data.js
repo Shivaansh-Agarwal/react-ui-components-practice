@@ -9,6 +9,14 @@ const projectsData = [
     date: getDateString(2, 1, 2022),
     route: "/slideshow",
   },
+  {
+    id: 2,
+    title: "Accordian",
+    description:
+      "Accordions are useful when you want to toggle between hiding and showing large amount of content:",
+    date: getDateString(3, 1, 2022),
+    route: "/accordion",
+  },
 ];
 
 export default projectsData;

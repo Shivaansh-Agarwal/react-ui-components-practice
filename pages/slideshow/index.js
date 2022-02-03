@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import { Layout } from "../../components/common";
+import { ComponentLayout } from "../../components/common";
 
 const imagesData = [
   {
@@ -27,16 +27,9 @@ const imagesData = [
 
 export default function SlideShowPage() {
   return (
-    <Layout>
-      <div className="flex flex-col w-full bg-white p-4">
-        <div className="text-2xl font-bold text-gray-800">
-          Slideshow/Carousel Component
-        </div>
-        <div className="flex justify-center mt-16">
-          <Slideshow imagesList={imagesData} width={"700px"} height={"300px"} />
-        </div>
-      </div>
-    </Layout>
+    <ComponentLayout heading={"Slideshow/Carousel Component"}>
+      <Slideshow imagesList={imagesData} width={"700px"} height={"300px"} />
+    </ComponentLayout>
   );
 }
 
