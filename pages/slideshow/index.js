@@ -1,7 +1,29 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Layout } from "../../components/common";
-import { imagesData } from "./data.js";
+
+const imagesData = [
+  {
+    id: 1,
+    url: "https://www.w3schools.com/howto/img_nature_wide.jpg",
+    caption: "Caption 1",
+  },
+  {
+    id: 2,
+    url: "https://www.w3schools.com/howto/img_snow_wide.jpg",
+    caption: "Caption 2",
+  },
+  {
+    id: 3,
+    url: "https://www.w3schools.com/howto/img_mountains_wide.jpg",
+    caption: "Caption 3",
+  },
+  {
+    id: 4,
+    url: "https://www.w3schools.com/howto/img_lights_wide.jpg",
+    caption: "Caption 4",
+  },
+];
 
 export default function SlideShowPage() {
   return (
@@ -45,7 +67,7 @@ function Slideshow({ imagesList, width, height }) {
   }
 
   return (
-    <div className={`flex flex-col items-center w-[${width}] h-[${height}]`}>
+    <div className={`flex flex-col items-center w-[700px] h-[300px]`}>
       <div className="relative border w-full h-full">
         <Image src={imgURL} alt={caption} layout="fill" />
         <Button type="left" clickHandler={showPrevImage}>
